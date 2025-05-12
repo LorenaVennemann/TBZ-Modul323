@@ -40,4 +40,9 @@ Dieses Repository begleitet das Modul [M323 - Funktional Programmieren](https://
 
 Dieses Repository wurde im Rahmen des Unterrichts an der TBZ Zürich erstellt.  
 Die Durchführung des Moduls erfolgte durch die Lehrperson **Julian Kaser**.  
+
 **Stand:** Mai 2025
+**Start:** 12.05.2025
+**Start:** 07.07.2025
+
+
