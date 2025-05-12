@@ -1,0 +1,12 @@
+2025.05.12 11:38:17 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.05.12 11:38:19 INFO  Running List(C:\Users\Jilve\AppData\Local\Coursier\data\bin\scala-cli.BAT, setup-ide, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen)
+2025.05.12 11:38:19 INFO  Attempting to connect to the build server...
+2025.05.12 11:38:19 INFO  Running BSP server List(C:\Users\Jilve\AppData\Local\Coursier\data\bin\.scala-cli.aux.exe, bsp, --json-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-options-v2.json, --json-launcher-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-launcher-options.json, --envs-file, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-envs.json, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen)
+2025.05.12 11:38:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\bsp.trace.json or C:\Users\Jilve\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.05.12 11:38:20 INFO  time: Connected to build server in 1.36s
+2025.05.12 11:38:20 INFO  Connected to Build server: scala-cli v1.8.0
+2025.05.12 11:38:21 INFO  time: Imported build in 0.15s
+2025.05.12 11:38:21 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.12 11:38:30 INFO  time: indexed workspace in 8.37s
+2025.05.12 11:38:35 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
+2025.05.12 11:38:37 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
