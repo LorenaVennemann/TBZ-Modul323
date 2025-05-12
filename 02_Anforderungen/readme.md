@@ -1,4 +1,6 @@
-# Probleme deklarativ umsetzen – Funktionale Programmierung
+# 📚 Projekt: Funktionale Programmierung mit Scala
+
+---
 
 ## 🎯 Lernziele
 
@@ -9,62 +11,52 @@
 
 ---
 
-## 📌 Grundidee
+## 🧠 Grundidee
 
 In der funktionalen Programmierung steht nicht das *Wie*, sondern das *Was* im Vordergrund.
 
-**Beispiel:**
-> Ich möchte ein Programm, das 5 % Rabatt vom Totalbetrag berechnet.
-
-Dies beschreibt **was** gewünscht ist – nicht **wie** es umgesetzt wird.
-
----
-
-## 🔧 Auftrag
-
-Erkenne aus den folgenden Anforderungen mögliche Funktionen. Formuliere nur die **Funktionssignaturen** – die Implementierung erfolgt später.
+**Beispiel:**  
+> Ich möchte ein Programm, das 5 % Rabatt vom Totalbetrag berechnet.  
+→ Dies beschreibt **was** gewünscht ist – nicht **wie** es umgesetzt wird.
 
 ---
 
-## 🧩 Beispiele
+## 🧩 Aufgabenbeschreibung
 
-### Beispiel 1: Eine Reise planen
+### Aufgabe 1 – Reise planen
 
-**Anforderung:**
-- Der Benutzer gibt Destinationen für eine Reise durch Europa ein.
-- Eine festgelegte Route soll bearbeitbar sein (z. B. Zwischenstopp hinzufügen oder ändern).
+**Anforderung:**  
+- Benutzer gibt Destinationen für eine Reise durch Europa ein.
+- Eine bestehende Route soll bearbeitbar sein (z. B. Zwischenstopp hinzufügen oder ändern).
+
+**Mögliche Funktionen:**
+- `addDestination(route: List[String], destination: String): List[String]`
+- `updateDestination(route: List[String], index: Int, newDestination: String): List[String]`
 
 ---
 
-### Beispiel 2: Wörter mit Punkten bewerten
+### Aufgabe 2 – Wörter mit Punkten bewerten
 
-**Anforderung:**
+**Anforderung:**  
 - Wörter sollen eingegeben werden.
-- Jeder Buchstabe gibt einen Punkt, außer dem Buchstaben "a".
-- Die Wörterliste soll nach Punkten sortiert werden.
+- Jeder Buchstabe ergibt einen Punkt, außer "a".
+- Wörterliste soll nach Punktzahl sortiert werden.
+
+**Mögliche Funktionen:**
+- `calculatePoints(word: String): Int`
+- `sortWordsByPoints(words: List[String]): List[(String, Int)]`
 
 ---
 
-### Beispiel 3: Autorennen
+### Aufgabe 3 – Autorennen
 
-**Anforderung:**
-- Die Gesamtzeit für alle Runden eines Autos soll berechnet werden.
-- Die Durchschnittszeit pro Auto soll berechnet werden.
-- Die erste Runde zählt nicht, da es sich um eine Warm-up-Runde handelt.
+**Anforderung:**  
+- Gesamtzeit aller Runden (ohne Warm-up) berechnen.
+- Durchschnittszeit berechnen.
 
----
-
-## 🛠 Umsetzung
-
-Die Funktionen sollen später in einer funktionalen Programmiersprache wie **Scala** umgesetzt werden. Dabei soll auf Seiteneffekte verzichtet werden (pure functions) und der Code soll deklarativ formuliert sein.
-
----
-
-## 📁 Struktur
-
-- `README.md` → Projektübersicht & Aufgabenstellung
-- `src/` → Scala-Code (nach Aufgaben strukturiert)
-- `doc/` → ggf. Skizzen oder Entwürfe der Funktionssignaturen
+**Mögliche Funktionen:**
+- `calculateTotalTime(times: List[Double]): Double`
+- `calculateAverageTime(times: List[Double]): Double`
 
 ---
 
@@ -73,12 +65,22 @@ Die Funktionen sollen später in einer funktionalen Programmiersprache wie **Sca
 | Aufgabe                         | Status |
 |----------------------------------|--------|
 | Anforderungen analysieren        | ⬜      |
-| Funktionssignaturen formulieren | ⬜      |
+| Funktionssignaturen formulieren | ⬜       |
 | Scala-Implementierung            | ⬜      |
 | Ergebnisse testen                | ⬜      |
 
 ---
 
-**Name:** Lorena Jil Vennemann 
-**Klasse:** Ap22b 
-**Datum:** 12. Mai 2025
+## 📌 Hinweis
+
+Bei der Umsetzung wird auf funktionale Konzepte geachtet:
+- Keine Seiteneffekte
+- Reine Funktionen
+- Listenoperationen wie `map`, `filter`, `fold`, `sortBy` etc.
+- Immutable Datenstrukturen
+
+---
+
+**Name:** Lorena Jil Vennemann  
+**Klasse:** Ap22b  
+**Datum:** 12. Mai 2025  
