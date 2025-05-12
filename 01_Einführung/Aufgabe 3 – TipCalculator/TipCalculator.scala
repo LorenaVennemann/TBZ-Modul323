@@ -1,17 +1,21 @@
-class TipCalculator {
-  private var names = List[String]()
-  private var tipPercentage = 0
-
-  def addPerson(name: String): Unit = {
-    names = names :+ name
-    tipPercentage = names.size match {
-      case size if size > 5 => 20
-      case size if size > 0 => 10
+object TipCalculator {
+  def calculateTip(names: List[String]): Int = {
+    names.length match {
+      case n if n > 5 => 20
+      case n if n > 0 => 10
       case _ => 0
     }
   }
+}
 
-  def getNames: List[String] = names
+object TipCalculatorDemo {
+  def main(args: Array[String]): Unit = {
+    val smallGroup = List("Alice", "Bob", "Charlie")
+    val largeGroup = List("Alice", "Bob", "Charlie", "Dave", "Eve", "Frank")
+    val emptyGroup = List.empty[String]
 
-  def getTipPercentage: Int = tipPercentage
+    println(s"Tip for small group (${smallGroup.length} people): ${TipCalculator.calculateTip(smallGroup)}%")
+    println(s"Tip for large group (${largeGroup.length} people): ${TipCalculator.calculateTip(largeGroup)}%")
+    println(s"Tip for empty group: ${TipCalculator.calculateTip(emptyGroup)}%")
+  }
 }
