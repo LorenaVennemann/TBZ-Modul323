@@ -1,0 +1,20 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "C:\\Users\\Jilve\\AppData\\Local\\Coursier\\data\\bin\\.scala-cli.aux.exe",
+    "bsp",
+    "--json-options",
+    "C:\\Users\\Jilve\\TBZ\\TBZ-Modul323\\02_Anforderungen\\.scala-build\\ide-options-v2.json",
+    "--json-launcher-options",
+    "C:\\Users\\Jilve\\TBZ\\TBZ-Modul323\\02_Anforderungen\\.scala-build\\ide-launcher-options.json",
+    "--envs-file",
+    "C:\\Users\\Jilve\\TBZ\\TBZ-Modul323\\02_Anforderungen\\.scala-build\\ide-envs.json",
+    "C:\\Users\\Jilve\\TBZ\\TBZ-Modul323\\02_Anforderungen"
+  ],
+  "version": "1.8.0",
+  "bspVersion": "2.1.1",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}
