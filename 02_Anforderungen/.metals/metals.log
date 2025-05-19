@@ -10,3 +10,67 @@
 2025.05.12 11:38:30 INFO  time: indexed workspace in 8.37s
 2025.05.12 11:38:35 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
 2025.05.12 11:38:37 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
+2025.05.19 08:25:09 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
+2025.05.19 08:25:11 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
+2025.05.19 08:25:13 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
+2025.05.19 08:31:15 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
+2025.05.19 08:31:18 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1.scala
+2025.05.19 08:34:09 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:34:13 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 4.21s
+2025.05.19 08:34:15 INFO  time: code lens generation in 1.19s
+2025.05.19 08:35:34 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 2.scala. Using presentation compiler with project's scala-library version: 3.7.0
+2025.05.19 08:35:34 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 2.scala. Using presentation compiler with project's scala-library version: 3.7.0
+2025.05.19 08:35:34 WARN  no build target for: C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 2.scala
+2025.05.19 08:35:34 INFO  Cancelling compilation on scala-cli server
+2025.05.19 08:35:34 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:35:34 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.46s
+2025.05.19 08:35:34 INFO  time: Imported build in 0.5s
+2025.05.19 08:35:37 INFO  time: indexed workspace in 2.73s
+2025.05.19 08:35:40 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.7.0
+2025.05.19 08:35:40 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.7.0
+2025.05.19 08:35:40 WARN  no build target for: C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 3.scala
+2025.05.19 08:35:41 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.7.0
+2025.05.19 08:35:41 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.7.0
+2025.05.19 08:35:40 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1 - Beispiele umsetzen als Funktionen\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.7.0
+2025.05.19 08:35:41 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:35:43 INFO  time: indexed workspace in 1.8s
+2025.05.19 08:36:12 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+May 19, 2025 8:36:12 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\.reports\metals-full\2025-05-19\r_empty-definition_(02_Anforderungen_c45ccdb915)_08-36-12-856.md)
+2025.05.19 08:36:12 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.75s
+May 19, 2025 8:36:18 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\.reports\metals-full\2025-05-19\r_empty-definition_(02_Anforderungen_c45ccdb915)_08-36-12-856.md)
+2025.05.19 08:36:46 INFO  Shutting down server
+2025.05.19 08:36:46 INFO  shutting down Metals
+2025.05.19 08:36:46 INFO  Shut down connection with build server.
+2025.05.19 08:36:46 INFO  BSP server: May 19, 2025 8:36:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+2025.05.19 08:36:46 INFO  Exiting server
+2025.05.19 08:37:28 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\lsp.trace.json or C:\Users\Jilve\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.05.19 08:37:37 INFO  logging to files C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\metals.log
+2025.05.19 08:37:37 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen' for client Visual Studio Code 1.100.0.
+2025.05.19 08:37:38 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1, 2 und 3\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.05.19 08:37:45 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1, 2 und 3\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.05.19 08:37:46 INFO  Attempting to connect to the build server...
+2025.05.19 08:37:46 INFO  Running BSP server List(C:\Users\Jilve\AppData\Local\Coursier\data\bin\.scala-cli.aux.exe, bsp, --json-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-options-v2.json, --json-launcher-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-launcher-options.json, --envs-file, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-envs.json, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen)
+2025.05.19 08:37:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\bsp.trace.json or C:\Users\Jilve\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.05.19 08:37:51 INFO  time: Connected to build server in 5.72s
+2025.05.19 08:37:51 INFO  Connected to Build server: scala-cli v1.8.0
+2025.05.19 08:37:52 INFO  time: Imported build in 0.25s
+2025.05.19 08:37:52 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:37:53 WARN  Invalid text document uri received from build server: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201%20-%20Beispiele%20umsetzen%20als%20Funktionen/Aufgabe1,2%20und%203.scala
+2025.05.19 08:37:53 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 1.09s
+2025.05.19 08:37:53 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:37:55 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 1.75s
+2025.05.19 08:37:56 INFO  time: indexed workspace in 5.18s
+2025.05.19 08:37:57 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:37:57 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.19s
+2025.05.19 08:38:13 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:38:13 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.14s
+2025.05.19 08:38:14 WARN  Could not find semantic tokens for: file:///C:/Users/Jilve/TBZ/TBZ-Modul323/02_Anforderungen/Aufgabe%201,%202%20und%203/Aufgabe1,2%20und%203.scala
+2025.05.19 08:38:15 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:38:15 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.19s
+2025.05.19 08:38:37 INFO  Shutting down server
+2025.05.19 08:38:37 INFO  shutting down Metals
+2025.05.19 08:38:37 INFO  Shut down connection with build server.
+2025.05.19 08:38:37 INFO  BSP server: May 19, 2025 8:38:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+2025.05.19 08:38:37 INFO  Exiting server
