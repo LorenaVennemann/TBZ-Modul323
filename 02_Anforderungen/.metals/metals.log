@@ -74,3 +74,38 @@ WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report a
 2025.05.19 08:38:37 INFO  Shut down connection with build server.
 2025.05.19 08:38:37 INFO  BSP server: May 19, 2025 8:38:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
 2025.05.19 08:38:37 INFO  Exiting server
+2025.05.19 08:39:10 INFO  Started: Metals version 1.5.3 in folders 'C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen' for client Visual Studio Code 1.100.2.
+2025.05.19 08:39:10 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1, 2 und 3\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.19 08:39:18 INFO  no build target found for C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\Aufgabe 1, 2 und 3\Aufgabe1,2 und 3.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.19 08:39:19 INFO  Attempting to connect to the build server...
+2025.05.19 08:39:19 INFO  Running BSP server List(C:\Users\Jilve\AppData\Local\Coursier\data\bin\.scala-cli.aux.exe, bsp, --json-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-options-v2.json, --json-launcher-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-launcher-options.json, --envs-file, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-envs.json, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen)
+2025.05.19 08:39:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\bsp.trace.json or C:\Users\Jilve\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.05.19 08:39:19 INFO  time: Connected to build server in 1.28s
+2025.05.19 08:39:20 INFO  Connected to Build server: scala-cli v1.8.0
+2025.05.19 08:39:20 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:39:21 INFO  time: Imported build in 0.69s
+2025.05.19 08:39:20 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:39:21 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.29s
+2025.05.19 08:39:30 INFO  time: indexed workspace in 9.13s
+2025.05.19 08:39:31 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:39:31 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.2s
+2025.05.19 08:42:52 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:42:56 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 3.8s
+2025.05.19 08:43:01 INFO  compiling 02_anforderungen_c45ccdb915 (1 scala source)
+2025.05.19 08:43:01 INFO  time: compiled 02_Anforderungen_c45ccdb915 in 0.81s
+2025.05.19 08:46:35 INFO  Shutting down server
+2025.05.19 08:46:35 INFO  shutting down Metals
+2025.05.19 08:46:35 INFO  Shut down connection with build server.
+2025.05.19 08:46:35 INFO  BSP server: May 19, 2025 8:46:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+2025.05.19 08:46:35 INFO  Exiting server
+2025.05.19 08:46:55 INFO  Started: Metals version 1.5.3 in folders 'C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen' for client Visual Studio Code 1.100.2.
+2025.05.19 08:46:57 INFO  Attempting to connect to the build server...
+2025.05.19 08:46:57 INFO  Running BSP server List(C:\Users\Jilve\AppData\Local\Coursier\data\bin\.scala-cli.aux.exe, bsp, --json-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-options-v2.json, --json-launcher-options, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-launcher-options.json, --envs-file, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.scala-build\ide-envs.json, C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen)
+2025.05.19 08:46:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Jilve\TBZ\TBZ-Modul323\02_Anforderungen\.metals\bsp.trace.json or C:\Users\Jilve\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.05.19 08:46:57 INFO  time: Connected to build server in 0.83s
+2025.05.19 08:46:58 INFO  Connected to Build server: scala-cli v1.8.0
+2025.05.19 08:47:06 INFO  time: indexed workspace in 8.84s
+2025.05.19 08:50:04 INFO  Shutting down server
+2025.05.19 08:50:04 INFO  shutting down Metals
+2025.05.19 08:50:04 INFO  Shut down connection with build server.
+2025.05.19 08:50:04 INFO  Exiting server
