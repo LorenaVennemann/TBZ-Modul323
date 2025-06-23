@@ -26,9 +26,9 @@ object TupelExercises extends App {
   // Zusatzaufgabe: Trending Funktion
   def trending(rates: List[BigDecimal]): Boolean = {
     rates
-      .zip(rates.drop(1))  // Erzeugt Tupel von aufeinanderfolgenden Werten
-      .forall { case (prev, curr) => curr > prev }  // Prüft ob jeder nachfolgende Wert größer ist
-  }
+      .zip(rates.drop(1))  
+      .forall { case (prev, curr) => curr > prev }       
+}
 
   // Test der Trending Funktion
   println(trending(List(BigDecimal(1), BigDecimal(4), BigDecimal(3), BigDecimal(8))))  // false
