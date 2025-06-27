@@ -4,10 +4,11 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeParseException
 
-// Data models (immutable)
+// Datenmodelle (unveränderlich)
 sealed trait Category {
   def name: String
   def subcategories: List[Category]
+  // Methode, um Unterkategorien zu ersetzen (für Immutabilität)
   def withSubcategories(newSubcategories: List[Category]): Category
 }
 
@@ -16,6 +17,7 @@ case class SimpleCategory(name: String, subcategories: List[Category] = Nil) ext
     copy(subcategories = newSubcategories)
 }
 
+// Aufgaben-Item mit ID, Titel, Kategorie, Fälligkeitsdatum und Erledigt-Status
 case class TodoItem(
   id: Int,
   title: String,
@@ -25,92 +27,123 @@ case class TodoItem(
 )
 
 object TodoApp extends App {
+  // Typalias für bessere Lesbarkeit
   type TodoList = List[TodoItem]
   type CategoryList = List[Category]
 
-  // Central IO functions
+  // Zentrale Ein-/Ausgabefunktionen für Konsole
   def printLine(s: String): Unit = println(s)
   def readInput(prompt: String): String = {
-    print(prompt)
-    readLine()
+    print(prompt)           // Eingabeaufforderung anzeigen
+    readLine()              // Zeile vom Benutzer lesen
   }
 
-  // Pure functions for category manipulation
+  // Reine Funktionen zur Bearbeitung von Kategorien
+
+  // Kategorie hinzufügen,
+  // optional auch als Unterkategorie einer vorhandenen
   def addCategory(categories: CategoryList, name: String, parentName: Option[String] = None): CategoryList = 
     parentName match {
-      case None =>
+      case None => // Oberste Ebene: falls Name noch nicht existiert, hinzufügen
         if (categories.exists(_.name == name)) categories
         else categories :+ SimpleCategory(name)
-      case Some(parent) =>
+      case Some(parent) => // Unterkategorie hinzufügen, wenn Eltern-Kategorie gefunden wird
         categories.map {
           case c: SimpleCategory if c.name == parent =>
             c.withSubcategories(
               if (c.subcategories.exists(_.name == name)) c.subcategories 
               else c.subcategories :+ SimpleCategory(name)
             )
-          case c => c
+          case c => c // andere Kategorien bleiben unverändert
         }
     }
 
+  // Kategorie (inkl. Unterkategorien) löschen
   def deleteCategory(categories: CategoryList, name: String): CategoryList = 
     categories.filterNot(_.name == name).map { c =>
-      c.withSubcategories(deleteCategory(c.subcategories, name))
+      c.withSubcategories(deleteCategory(c.subcategories, name)) // rekursiv Unterkategorien prüfen
     }
 
+  // Rekursive Suche nach Kategorie anhand des Namens
   def findCategory(categories: CategoryList, name: String): Option[Category] = {
     def find(cats: List[Category]): Option[Category] = cats match {
-      case Nil => None
+      case Nil => None             // Nichts mehr da? None zurück
       case head :: tail => 
-        if (head.name == name) Some(head)
-        else find(head.subcategories) match {
+        if (head.name == name) Some(head)                      // Treffer
+        else find(head.subcategories) match {                   // sonst in Unterkategorien suchen
           case Some(found) => Some(found)
-          case None => find(tail)
+          case None => find(tail)                                // sonst in restlichen Kategorien suchen
         }
     }
     find(categories)
   }
 
-  // Pure functions for todo manipulation
+  // Zusätzliche Funktion zum Hinzufügen von Unter-Unterkategorien (rekursiv)
+  def addSubcategoryRec(categories: CategoryList, parentName: String, subcatName: String): CategoryList = {
+    categories.map {
+      case c if c.name == parentName =>
+        // Wenn Eltern gefunden, Unterkategorie anhängen, wenn nicht vorhanden
+        val updatedSubs = 
+          if (c.subcategories.exists(_.name == subcatName)) c.subcategories
+          else c.subcategories :+ SimpleCategory(subcatName)
+        c.withSubcategories(updatedSubs)
+      case c =>
+        // Rekursiv auch in Unterkategorien suchen und hinzufügen
+        c.withSubcategories(addSubcategoryRec(c.subcategories, parentName, subcatName))
+    }
+  }
+
+  // Reine Funktionen zur Bearbeitung von Aufgaben (Todos)
+
+  // Neue Aufgabe hinzufügen mit automatischer ID-Vergabe
   def addTodo(todos: TodoList, title: String, category: Category, deadline: LocalDate): TodoList = {
-    val newId = if (todos.isEmpty) 1 else todos.map(_.id).max + 1
+    val newId = if (todos.isEmpty) 1 else todos.map(_.id).max + 1  // größte ID + 1
     todos :+ TodoItem(newId, title, category, deadline)
   }
 
+  // Aufgabe aktualisieren anhand der ID, mit Update-Funktion
   def updateTodo(todos: TodoList, id: Int, updateFn: TodoItem => TodoItem): TodoList = 
     todos.map(todo => if (todo.id == id) updateFn(todo) else todo)
 
+  // Aufgabe löschen anhand der ID
   def deleteTodo(todos: TodoList, id: Int): TodoList = 
     todos.filterNot(_.id == id)
 
-  // Filtering with HOFs
+  // Filterfunktionen mit Higher-Order-Functions
+
+  // Aufgaben filtern nach Kategorie (inkl. Unterkategorien)
   def filterTodosByCategory(todos: TodoList, categoryName: String): TodoList =
     todos.filter(todo => categoryNameMatch(todo.category, categoryName))
 
+  // Aufgaben filtern nach Fälligkeitsdatum bis inkl. deadline
   def filterTodosByDeadline(todos: TodoList, deadline: LocalDate): TodoList =
     todos.filter(todo => todo.deadline.isBefore(deadline) || todo.deadline.isEqual(deadline))
 
-  // Helper functions
+  // Hilfsfunktion: Prüft ob Kategorie oder Unterkategorie mit Namen übereinstimmt
   def categoryNameMatch(cat: Category, name: String): Boolean =
     cat.name == name || cat.subcategories.exists(sc => categoryNameMatch(sc, name))
 
+  // Hilfsfunktion: Datum aus String parsen, Format: yyyy-MM-dd
   def parseDate(input: String): Option[LocalDate] = {
     val fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     try Some(LocalDate.parse(input, fmt))
     catch {
-      case _: DateTimeParseException => None
+      case _: DateTimeParseException => None // falls falsch formatiert
     }
   }
 
+  // Ausgabeformat für eine Aufgabe
   def showTodo(todo: TodoItem): String = 
     s"ID: ${todo.id} | ${todo.title} | Kategorie: ${todo.category.name} | Deadline: ${todo.deadline} | Erledigt: ${if (todo.done) "Ja" else "Nein"}"
 
+  // Ausgabe einer Kategorie mit eingerückten Unterkategorien
   def showCategory(cat: Category, indent: String = ""): String = {
     val subcats = if (cat.subcategories.isEmpty) "" 
                  else cat.subcategories.map(sc => showCategory(sc, indent + "  ")).mkString("\n")
     s"$indent- ${cat.name}" + (if (subcats.isEmpty) "" else "\n" + subcats)
   }
 
-  // Funktionen zur Userinteraktion (rein in der IO-Schicht)
+  // Funktionen für die Benutzer-Eingabe und Menüführung
 
   @tailrec
   def mainMenu(todos: TodoList, categories: CategoryList): Unit = {
@@ -124,11 +157,12 @@ object TodoApp extends App {
         |5) Kategorien anzeigen
         |6) Kategorie anlegen
         |7) Kategorie löschen
-        |8) Nach Aufgaben filtern
-        |9) Beenden
+        |8) Unterkategorie anlegen  
+        |9) Nach Aufgaben filtern
+        |10) Beenden
         |---------------------
       """.stripMargin)
-    val choice = readInput("Wähle Option (1-9): ").trim
+    val choice = readInput("Wähle Option (1-10): ").trim
 
     choice match {
       case "1" =>
@@ -173,7 +207,7 @@ object TodoApp extends App {
                   case "nein" => false
                   case _ => todo.done
                 }
-                // Für Kategorieänderung Option anbieten
+                // Option zum Ändern der Kategorie
                 val changeCat = readInput("Kategorie ändern? (ja/nein): ").trim.toLowerCase
                 val newCategory = if (changeCat == "ja") {
                   printLine("Verfügbare Kategorien:")
@@ -238,7 +272,7 @@ object TodoApp extends App {
         val name = readInput("Name der zu löschenden Kategorie: ").trim
         if (categories.exists(_.name == name)) {
           val newCats = deleteCategory(categories, name)
-          // Auch Tasks löschen, die diese Kategorie bzw. Unterkategorien haben
+          // Auch Aufgaben löschen, die in dieser Kategorie oder Unterkategorien sind
           val keepTodos = todos.filterNot(t => categoryNameMatch(t.category, name))
           printLine("Kategorie und zugehörige Aufgaben gelöscht.")
           mainMenu(keepTodos, newCats)
@@ -248,6 +282,32 @@ object TodoApp extends App {
         }
 
       case "8" =>
+        // Neu: Unterkategorie hinzufügen
+        if (categories.isEmpty) {
+          printLine("Keine Kategorien vorhanden, bitte zuerst Kategorien anlegen.")
+          mainMenu(todos, categories)
+        } else {
+          printLine("Verfügbare Kategorien:")
+          categories.foreach(cat => printLine(showCategory(cat)))
+          val parentName = readInput("Bitte Name der Kategorie eingeben, unter der eine Unterkategorie angelegt werden soll: ").trim
+          findCategory(categories, parentName) match {
+            case None =>
+              printLine("Kategorie nicht gefunden.")
+              mainMenu(todos, categories)
+            case Some(_) =>
+              val subcatName = readInput("Name der neuen Unterkategorie: ").trim
+              if (subcatName.isEmpty) {
+                printLine("Name der Unterkategorie darf nicht leer sein.")
+                mainMenu(todos, categories)
+              } else {
+                val newCats = addSubcategoryRec(categories, parentName, subcatName)
+                printLine(s"Unterkategorie '$subcatName' unter '$parentName' angelegt.")
+                mainMenu(todos, newCats)
+              }
+          }
+        }
+
+      case "9" =>
         printLine(
           """
             |Filteroptionen:
@@ -276,7 +336,7 @@ object TodoApp extends App {
             mainMenu(todos, categories)
         }
 
-      case "9" =>
+      case "10" =>
         printLine("Programm beendet. Auf Wiedersehen!")
 
       case _ =>
@@ -285,12 +345,13 @@ object TodoApp extends App {
     }
   }
 
+  // Anfangsdaten mit Kategorien und leeren Aufgaben
   val initialCategories: CategoryList = List(
     SimpleCategory("Privat", List(SimpleCategory("Familie"), SimpleCategory("Freunde"))),
     SimpleCategory("Arbeit", List(SimpleCategory("Projekt A"), SimpleCategory("Projekt B")))
   )
   val initialTodos: TodoList = Nil
 
+  // Programmstart mit Hauptmenü
   mainMenu(initialTodos, initialCategories)
 }
-
