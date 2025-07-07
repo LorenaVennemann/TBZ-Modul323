@@ -1,14 +1,15 @@
 /**
- * Service-Klasse für die Verwaltung von Aufgaben (Tasks) in der Todo-Liste
+ * Hauptanwendung für die Todo-Listen App
  * 
- * Diese Klasse stellt alle notwendigen Operationen für das Handling von Aufgaben bereit:
- * - Hinzufügen neuer Aufgaben mit automatischer ID-Generierung
- * - Aktualisieren bestehender Aufgaben
- * - Löschen von Aufgaben
- * - Filtern von Aufgaben nach Kategorie oder Fälligkeitsdatum
+ * Diese Klasse ist der Einstiegspunkt der Anwendung und initialisiert:
+ * - Die benötigten Services für Kategorien und Aufgaben
+ * - Die Konsolen-basierte Benutzeroberfläche
+ * - Eine initiale Hierarchie von Kategorien
  * 
- * Alle Methoden sind immutabel implementiert und geben eine neue Liste zurück,
- * anstatt die bestehende zu modifizieren.
+ * Besonderheiten:
+ * - Verwendung des App-Traits für einfachen Programmstart
+ * - Vordefinierte Kategorie-Hierarchie für Benutzerfreundlichkeit
+ * - Trennung von UI und Geschäftslogik durch Services
  */
 import services._
 import modelle._
